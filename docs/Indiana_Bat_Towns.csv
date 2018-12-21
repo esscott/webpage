@@ -1,0 +1,36 @@
+﻿OBJECTID_1,TOWNNAME,OBS,State_Prot,Fed_Prot,OBS_Type
+1,CHARLOTTE,Potential,Endangered,Listed Endangered,Summer Range
+2,BENSON,Potential,Endangered,Listed Endangered,Summer Range
+3,SUDBURY,Potential,Endangered,Listed Endangered,Summer Range
+4,PITTSFORD,Potential,Endangered,Listed Endangered,Summer Range
+5,BRISTOL,Potential,Endangered,Listed Endangered,Summer Range
+6,WALTHAM,Potential,Endangered,Listed Endangered,Summer Range
+7,ST. GEORGE,Potential,Endangered,Listed Endangered,Summer Range
+8,FAIR HAVEN,Potential,Endangered,Listed Endangered,Summer Range
+9,DANBY,Potential,Endangered,Listed Endangered,Summer Range
+10,PAWLET,Potential,Endangered,Listed Endangered,Summer Range
+11,RUPERT,Potential,Endangered,Listed Endangered,Summer Range
+12,SANDGATE,Potential,Endangered,Listed Endangered,Summer Range
+13,ARLINGTON,Potential,Endangered,Listed Endangered,Summer Range
+14,SUNDERLAND,Potential,Endangered,Listed Endangered,Summer Range
+15,MIDDLEBURY,Observed,Endangered,Listed Endangered,Summer Range
+16,SALISBURY,Observed,Endangered,Listed Endangered,Summer Range
+17,ORWELL,Observed,Endangered,Listed Endangered,Summer Range
+18,SHOREHAM,Observed,Endangered,Listed Endangered,Summer Range
+19,BRIDPORT,Observed,Endangered,Listed Endangered,Summer Range
+20,NEW HAVEN,Observed,Endangered,Listed Endangered,Summer Range
+21,ADDISON,Observed,Endangered,Listed Endangered,Summer Range
+22,PANTON,Observed,Endangered,Listed Endangered,Summer Range
+23,FERRISBURG,Observed,Endangered,Listed Endangered,Summer Range
+24,STARKSBORO,Observed,Endangered,Listed Endangered,Summer Range
+25,BRANDON,Observed,Endangered,Listed Endangered,Hibernacula and Summer Range
+26,WEST HAVEN,Observed,Endangered,Listed Endangered,Summer Range
+27,HINESBURG,Observed,Endangered,Listed Endangered,Summer Range
+28,CORNWALL,Observed,Endangered,Listed Endangered,Summer Range
+29,LEICESTER,Observed,Endangered,Listed Endangered,Summer Range
+30,WHITING,Observed,Endangered,Listed Endangered,Summer Range
+31,WEYBRIDGE,Observed,Endangered,Listed Endangered,Summer Range
+32,VERGENNES,Observed,Endangered,Listed Endangered,Summer Range
+33,MONKTON,Observed,Endangered,Listed Endangered,Summer Range
+34,MANCHESTER,Observed,Endangered,Listed Endangered,Hibernacula
+35,DORSET,Observed,Endangered,Listed Endangered,Hibernacula

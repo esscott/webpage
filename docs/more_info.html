@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Emma Scott, Lily Schaeufele, Vivienne Maxwell" />
+
+
+<title>More Information</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">An Indiana Obatuary</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Blog Post</a>
+</li>
+<li>
+  <a href="more_info.html">More Info</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">More Information</h1>
+<h4 class="author"><em>Emma Scott, Lily Schaeufele, Vivienne Maxwell</em></h4>
+<h4 class="date"><em>Last updated on 2018-12-21</em></h4>
+
+</div>
+
+
+<div id="climate-change" class="section level1">
+<h1>Climate Change</h1>
+<div id="visualization-1" class="section level2">
+<h2>Visualization 1</h2>
+<p><img src="more_info_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+</div>
+<div id="explanation" class="section level2">
+<h2>Explanation</h2>
+<p>The scatterplot above aims at answering the first question of whether climate change and temperature rise is causing trends of extinction and compares the average temperatures in January 2017 to the number of observed bat hibernacula (Fig. 1). The larger, bluer dots represent areas with more hibernacula. Whereas, the smaller, darker dots represent areas with less hibernacula. Though it was presumed that, along with the effects of oncoming climate change, a rise in mean winter temperature would negatively affect bat populations, the scatterplot indicates that there is no obvious correlation or causation. For example, Manchester, Indiana has both the lowest average temperature at 24°F and and the highest number of bat hibernacula at 32. On the other hand, Middlebury and New Haven, Indiana, both with an average temperature of 24.5°F, differ in population from 20 and 15 hibernacula respectively.</p>
+<div class="figure">
+<img src="https://www.in.gov/dnr/fishwild/images/fw-indiana_bats.jpg" width="400" />
+
+</div>
+<p><strong>Figure 1.</strong> Bat hibernacula, areas where creatures seek refuge, huddling together while overwintering.</p>
+</div>
+<div id="data-description-source" class="section level2">
+<h2>Data Description &amp; Source</h2>
+<p>The Indiana_Bat_Towns.csv dataset was sourced from Data.Gov where it was published by the Indiana Center for Geographic Information which is a division of Agency of Commerce and Community Development for public use.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> It contains the names of towns in Indiana where hibernacula of endangered bat species have been observed. Beginning in the 1930s at the earliest, survey data has been collected in order to compile this comprehensive dataset. By means of regular underground experiments to determine the location of and the number of bats nesting in the winter months.</p>
+<p>The accompanying EveryPlaceInIndiana.csv dataset was sourced from StatsIndiana, Indiana’s Public Data Utility and published by Information for Indiana. It contains “a list of all the named places in Indiana, including those that are not incorporated.”<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> The INJan18AvgTemp.csv dataset is comprised of average high and low temperatures in January 2017 web-scraped from the National Weather Service and manually entered into a new dataset, formatted alongside the Indiana town names to be easily joined.</p>
+</div>
+</div>
+<div id="geographical-distribution" class="section level1">
+<h1>Geographical Distribution</h1>
+<div id="visualization-2" class="section level2">
+<h2>Visualization 2</h2>
+<div id="htmlwidget-23bcd5290cfbced6ab58" style="width:768px;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-23bcd5290cfbced6ab58">{"x":{"options":{"minZoom":6,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"Map tiles by <a href=\"http://stamen.com\">Stamen Design<\/a>, <a href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0<\/a> &mdash; Map data &copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap<\/a>"}]},{"method":"addCircleMarkers","args":[[41.721439,39.1839358,39.2642084,41.0706042,41.6797578,39.1517216],[-85.8174946,-86.5499977,-87.1189019,-85.0144124,-87.4944873,-85.012178],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#ffa500","weight":5,"opacity":0.5,"fill":true,"fillColor":"#ffa500","fillOpacity":0.2},null,null,null,null,["BRISTOL","ARLINGTON","MIDDLEBURY","NEW HAVEN","WHITING","MANCHESTER"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[39.1517216,41.721439],"lng":[-87.4944873,-85.012178]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="explanation-1" class="section level2">
+<h2>Explanation</h2>
+<p>Indiana Bat’s scientific name “Myotis Sodalis” give clues to the bat’s physique and lifestyle. Where “Myotis” refers broadly to the bat and specifically to its petite “mouse like ears.” The second half of its namesake “Sodalis” is directly translated from latin to mean ‘member’ or ‘companion’. It would seem this half of the name was chosen to represent the remarkable social behavior of the bat species which are documented to hibernate together in numbers up to 50,000 with 500 bats per square foot. As mentioned above the popularity of their hibernation soirees, both from most of the bat’s population congregating to one or two caves, as well as the human population disrupting those caves, puts the “Myotis Sodalis” at risk of total extinction.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<p>It’s common name is derived from a discovery of the bat species in southern Indiana’s Wyandotte Cave in 1904. Since the first documentation of that discovery in 1928, the Indiana Bat species has been documented throughout the midwest. The pinnacles of their range reaches Washington State in the West and Vermont in the East.</p>
+<p>The interactive map marks all the towns where Indiana Bats have been known to live. Primarily these towns support their “summer range”. This is when the bats are roosting under the bark of dead trees. However the town of Brandon provides habitat for their summer range and hibernacula. “Hibernacula” being the winter phase where the bats seek refuge in caves for hibernation. The towns of Manchester and Dorset only support habitat for the bats Hibernacula phase.</p>
+<p>Indiana Bats are also a threat to the “white nose syndrome”, a fungal disease first recorded in 2007. There is of yet no cure to this disease, which grows and infect the bats in hibernation while they are in close proximity in mass numbers. Despite the wide range in North America (the only continent it has been recorded to live on), if the The U.S. Fish and Wildlife Service recovery plan does not start to take effect soon, they are most likely to go extinct.</p>
+<p><strong>Word Count</strong>: 676</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>“Indiana Bat (Towns).” Data Catalog, VT Center for Geographic Information, 6 June 2018, catalog.data.gov/dataset/indiana-bat-towns.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>“Geography Tools.” InDepth Profile: STATS Indiana, Information for Indiana, 2018, www.stats.indiana.edu/maptools/GeographyTools.asp.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Service, U.S. Fish and Wildlife. “Indiana Bat (Myotis Sodalis).” Official Web Page of the U S Fish and Wildlife Service, www.fws.gov/midwest/endangered/mammals/inba/inbafctsht.html.<a href="#fnref3">↩</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

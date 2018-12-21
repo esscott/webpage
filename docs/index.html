@@ -9,10 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Emma Scott" />
+<meta name="author" content="Emma Scott, Lily Schaeufele, Vivienne Maxwell" />
 
 
-<title>My Website</title>
+<title>An Indiana Obatuary</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,54 +24,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 
 
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-pre, code { background-color: #f8f8f8; }
-code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code > span.dt { color: #204a87; } /* DataType */
-code > span.dv { color: #0000cf; } /* DecVal */
-code > span.bn { color: #0000cf; } /* BaseN */
-code > span.fl { color: #0000cf; } /* Float */
-code > span.ch { color: #4e9a06; } /* Char */
-code > span.st { color: #4e9a06; } /* String */
-code > span.co { color: #8f5902; font-style: italic; } /* Comment */
-code > span.ot { color: #8f5902; } /* Other */
-code > span.al { color: #ef2929; } /* Alert */
-code > span.fu { color: #000000; } /* Function */
-code > span.er { color: #a40000; font-weight: bold; } /* Error */
-code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #000000; } /* SpecialChar */
-code > span.vs { color: #4e9a06; } /* VerbatimString */
-code > span.ss { color: #4e9a06; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #000000; } /* Variable */
-code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code > span.ex { } /* Extension */
-code > span.at { color: #c4a000; } /* Attribute */
-code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 
 
 <style type="text/css">
@@ -304,24 +258,19 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">My Website</a>
+      <a class="navbar-brand" href="index.html">An Indiana Obatuary</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">Blog Post</a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="more_info.html">More Info</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://2018-fall-sds-albert.slack.com/">
-    <span class="fa fa-slack fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -331,134 +280,33 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">My Website</h1>
-<h4 class="author"><em>Emma Scott</em></h4>
-<h4 class="date"><em>Last updated on 2018-11-27</em></h4>
+<h1 class="title toc-ignore">An Indiana Obatuary</h1>
+<h4 class="author"><em>Emma Scott, Lily Schaeufele, Vivienne Maxwell</em></h4>
+<h4 class="date"><em>Last updated on 2018-12-21</em></h4>
 
 </div>
 
 
-<!--
-Comments in HTML are like this! 
--->
-<p>Hello, Website!</p>
-<div id="my-first-section" class="section level1">
-<h1>My first section</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-<span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(<span class="dt">x=</span>cyl, <span class="dt">y=</span> mpg)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span> <span class="st">&quot;Number of cylinders&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Miles per gallon&quot;</span>)</code></pre></div>
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+<div id="blog-post" class="section level1">
+<h1>Blog Post</h1>
+<p>The Indiana Bat, scientifically named Myotis Sodalis, is a specific species of bats classified as endangered in 1967, when people began disrupting the bats’ hibernation patterns in winter. Indiana bats are prone to disturbances as they hibernate in large numbers in very few caves. This means that a particular cave in winter can contain a high density of the Indiana Bat population, and if disrupted this can result in the deaths of a large portion of the population. During the summer, the Indiana Bat roosts under peeling bark of dead and dying trees. The loss of summer habitat can also contribute to the death of bats, which exacerbates the already endangered state of this species.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>The barplot above illustrates the distribution of documented endangered Indiana bats among six towns in Indiana. The data illustrated above represents the number of bats roosting during the summer, with the exception of the data for Manchester. That data represents the number of bats hibernating during winter.</p>
+<p>The survey data used to create the dataset represented has been collected since the early 1930s and continues to be collected today. The data is collected periodically via underground surveys to identify and count the number of bats that hibernate during the winter.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>It is estimated that as of 2017 there are a total of 559,781 Indiana Bats located in the United States. Indiana has seen an approximate 10% population decline over the past 2 years. This suggests that the Indiana Bats’ recovery may be difficult and that it might be on its way to extinction.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<div id="problem-statement" class="section level2">
+<h2>Problem Statement</h2>
+<p>Might climate change and temperature rise be causing this trend? Is there influence of the geographical location of each habitat? Which towns have the highest reported numbers of bats?</p>
+<p><strong>Word Count:</strong> 288</p>
 </div>
-<div id="my-second-section" class="section level1">
-<h1>My second section</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(mtcars)</code></pre></div>
-<div class="kable-table">
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">mpg</th>
-<th align="right">cyl</th>
-<th align="right">disp</th>
-<th align="right">hp</th>
-<th align="right">drat</th>
-<th align="right">wt</th>
-<th align="right">qsec</th>
-<th align="right">vs</th>
-<th align="right">am</th>
-<th align="right">gear</th>
-<th align="right">carb</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Mazda RX4</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160</td>
-<td align="right">110</td>
-<td align="right">3.90</td>
-<td align="right">2.620</td>
-<td align="right">16.46</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td>Mazda RX4 Wag</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160</td>
-<td align="right">110</td>
-<td align="right">3.90</td>
-<td align="right">2.875</td>
-<td align="right">17.02</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">4</td>
-</tr>
-<tr class="odd">
-<td>Datsun 710</td>
-<td align="right">22.8</td>
-<td align="right">4</td>
-<td align="right">108</td>
-<td align="right">93</td>
-<td align="right">3.85</td>
-<td align="right">2.320</td>
-<td align="right">18.61</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td>Hornet 4 Drive</td>
-<td align="right">21.4</td>
-<td align="right">6</td>
-<td align="right">258</td>
-<td align="right">110</td>
-<td align="right">3.08</td>
-<td align="right">3.215</td>
-<td align="right">19.44</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td>Hornet Sportabout</td>
-<td align="right">18.7</td>
-<td align="right">8</td>
-<td align="right">360</td>
-<td align="right">175</td>
-<td align="right">3.15</td>
-<td align="right">3.440</td>
-<td align="right">17.02</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td>Valiant</td>
-<td align="right">18.1</td>
-<td align="right">6</td>
-<td align="right">225</td>
-<td align="right">105</td>
-<td align="right">2.76</td>
-<td align="right">3.460</td>
-<td align="right">20.22</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">1</td>
-</tr>
-</tbody>
-</table>
 </div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Bennett, Alyssa B. “Indian Bat (Towns).” Arcgis.com, 2007, www.arcgis.com/sharing/rest/content/items/cb6722eb750b4a6a93393299fc34c5d9/info/metadata/metadata.xml?format=default&amp;output=html.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Service, U.S. Fish and Wildlife. “USFWS: Indiana Bat (Myotis Sodalis).” Official Web Page of the U S Fish and Wildlife Service, 2018, www.fws.gov/midwest/endangered/mammals/inba/index.html.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>“2017 Indiana Bat (Myotis Sodalis) Population Status Update.” U.S. Fish &amp; Wildlife Service, 2017, www.fws.gov/midwest/Endangered/mammals/inba/pdf/2017_Population_Stats_Indiana_Bat_Revised_%2013Nov2018.pdf.<a href="#fnref3">↩</a></p></li>
+</ol>
 </div>
 
 
